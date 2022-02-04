@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+body{
+    background-color: cadetblue;
+}
+h1{
+    font-family: 'Calligraffitti', cursive;
+    color: black;
+    text-align: center;
+    font-size: 80px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    margin-top: 5px;
+}
+.search{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.search input[type="search"]{
+    height: 30px;
+    width: 23%;
+    border-radius:50px;
+}
+.search i{
+    font-size: 20px;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 100px;
+}
+.city{
+    font-size: 4rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 900;
+}
+.icon{
+    font-size: 9vh;
+}
+.temp{
+    margin-top: 70px;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+.error{
+    width: fit-content;
+    margin: auto;
+    color: red;
+    background-color: black;
+}

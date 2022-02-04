@@ -1,0 +1,41 @@
+const search = document.querySelector('.search');
+const city = document.querySelector('.city');
+const icon =document.querySelector('.icon'); 
+const temp = document.querySelector('.temp');
+const er = document.querySelector('.error');
+// console.log(fetch(`api.openweathermap.org/data/2.5/weather?q=mumbai&appid=de2c0fed3d481d039905d4850f5c1fc3`,{
+//     method:'GET'
+// }))
+search.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    const val = document.querySelector('#search').value;
+    if(val==null || val==''){
+      //pass;
+    }else{
+        console.log(val);
+    }
+    document.querySelector('#search').value='';
+    weather(val)
+})
+async function weather(loc){
+    try{
+        const keys = await fetch(`../weather app/key.txt`, {mode: 'no-cors'});
+        const key = await keys.text(); 
+        const resp = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${key}`)
+        const res = await resp.json();       
+        city.innerHTML = loc;
+        const src =`https://openweathermap.org/img/w/${res.weather[0].icon}.png`;
+        icon.innerHTML=`${res.weather[0].main}<img src='${src}' style="width: 70px; height: 70px;"></img>`;
+        const tem =res.main.temp-273.15;
+        temp.innerHTML = `${Math.trunc(tem)}°C`;
+
+    }catch(err){
+        console.log(err);
+        city.innerHTML = '';
+        er.innerHTML='<strong>NO PLACE OF THIS NAME EXISTS</strong>'
+        icon.innerHTML='';
+        temp.innerHTML='';
+        setTimeout(()=>{er.innerHTML=''},1900);
+    }
+    
+}
