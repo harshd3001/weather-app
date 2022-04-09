@@ -3,9 +3,7 @@ const city = document.querySelector('.city');
 const icon =document.querySelector('.icon'); 
 const temp = document.querySelector('.temp');
 const er = document.querySelector('.error');
-// console.log(fetch(`api.openweathermap.org/data/2.5/weather?q=mumbai&appid=de2c0fed3d481d039905d4850f5c1fc3`,{
-//     method:'GET'
-// }))
+
 search.addEventListener('submit',(e)=>{
     e.preventDefault();
     const val = document.querySelector('#search').value;
