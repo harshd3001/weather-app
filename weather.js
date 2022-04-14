@@ -3,7 +3,6 @@ const city = document.querySelector('.city');
 const icon =document.querySelector('.icon'); 
 const temp = document.querySelector('.temp');
 const er = document.querySelector('.error');
-
 const key = `65748b989f02ec2d31178557c552f849`;
 
 search.addEventListener('submit',(e)=>{
