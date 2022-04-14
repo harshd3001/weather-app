@@ -3,7 +3,7 @@ const city = document.querySelector('.city');
 const icon =document.querySelector('.icon'); 
 const temp = document.querySelector('.temp');
 const er = document.querySelector('.error');
-let key = undefined
+const key = `65748b989f02ec2d31178557c552f849`
 
 search.addEventListener('submit',(e)=>{
     e.preventDefault();
@@ -18,11 +18,8 @@ search.addEventListener('submit',(e)=>{
 })
 async function weather(loc){
     try{
-        const keys = await fetch(`../weather app/key.txt`, {mode: 'no-cors'});
-        key = await keys.text(); 
         const resp = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${key}`)
-        const res = await resp.json();   
-        console.log(res)    
+        const res = await resp.json();       
         city.innerHTML = loc;
         const src =`https://openweathermap.org/img/w/${res.weather[0].icon}.png`;
         icon.innerHTML=`${res.weather[0].main}<img src='${src}' style="width: 70px; height: 70px;"></img>`;
