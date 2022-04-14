@@ -3,19 +3,6 @@ const city = document.querySelector('.city');
 const icon =document.querySelector('.icon'); 
 const temp = document.querySelector('.temp');
 const er = document.querySelector('.error');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const key = `65748b989f02ec2d31178557c552f849`
-=======
->>>>>>> bddca8cec665f34fa6b20043ef0b997a8c6530a8
-=======
->>>>>>> bddca8cec665f34fa6b20043ef0b997a8c6530a8
-=======
->>>>>>> bddca8cec665f34fa6b20043ef0b997a8c6530a8
-=======
->>>>>>> bddca8cec665f34fa6b20043ef0b997a8c6530a8
 
 search.addEventListener('submit',(e)=>{
     e.preventDefault();
