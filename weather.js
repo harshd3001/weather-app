@@ -7,7 +7,7 @@ const key ='65748b989f02ec2d31178557c552f849';
 
 search.addEventListener('submit',(e)=>{
     e.preventDefault();
-    const val = document.querySelector('#search').value;
+    let val = document.querySelector('#search').value;
     if(val==null || val==''){
       //pass;
     }else{
